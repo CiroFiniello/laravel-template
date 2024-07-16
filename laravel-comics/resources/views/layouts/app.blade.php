@@ -4,24 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Laravel-comics</title>
+    <title>@yield('page-title', 'laravello')</title>
+    @yield('head-cdn')
+    @vite('resources/js/app.js')
 </head>
 <body>
-    <header>
-        <h1>
-            Header
-        </h1>
-    </header>
+    @include('pages.partials.header')
 
     <main>
 
         @yield('main-content')
     </main>
 
-    <footer>
-        <h2>
-            Footer
-        </h2>
-    </footer>
+    @include('pages.partials.footer')
+
+    @yield('custom-scripts')
 </body>
 </html>
